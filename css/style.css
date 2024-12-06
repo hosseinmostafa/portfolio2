@@ -1222,3 +1222,19 @@ header.sticky .nav-bar {
             display: none;
         }
 }
+
+
+.btn-dimo{
+    border: none;
+    color: #fff;
+    padding: 5px 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-dimo:hover{
+    background-color: #0056b3;
+}

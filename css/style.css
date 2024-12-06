@@ -187,14 +187,14 @@ header.sticky .nav-bar {
     color: var(--second-color);
 }
 
-.icon {
+.icon a{
     color: var(--second-color);
     font-size: .9rem;
     cursor: pointer;
     transition: .3s ease;
 }
 
-.icon:hover {
+.icon a:hover {
     color: var(--first-color);
 }
 
@@ -534,10 +534,10 @@ header.sticky .nav-bar {
 
 
 .skills-info h4 label {
-    background: var(--second-color);
+    /* background: var(--second-color); */
     color: #fff;
-    font-size: var(--normal-font-size);
-    font-weight: 400;
+    font-size: 1.5em !important;
+    font-weight: bold;
     padding: 5px 15px;
     border-radius: 5px;
 }
@@ -574,10 +574,10 @@ header.sticky .nav-bar {
 }
 
 .skills-s label {
-    background: var(--second-color);
+    /* background: var(--second-color); */
     color: #fff;
-    font-size: var(--normal-font-size);
-    font-weight: 400;
+    font-size: 1.5em;
+    font-weight: bold;
     padding: 5px 15px;
     border-radius: 5px;
 }

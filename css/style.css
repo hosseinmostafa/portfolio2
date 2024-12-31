@@ -178,6 +178,13 @@ header.sticky .nav-bar {
 .nav-items a.active {
     color: var(--second-color);
 }
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: var(--hover-color);
+}
+
+
+
 
 .nav-items a:not(:last-child) {
     margin-right: 50px;
@@ -995,14 +1002,6 @@ header.sticky .nav-bar {
     margin-right: 10px
 }
 
-.logo {
-    width: 19vh;
-    height: 4vh;
-    aspect-ratio: 3/2;
-    object-fit: cover;
-    object-position: center;
-    mix-blend-mode: color-burn;
-}
 
 .footer {
     background: var(--second-color);
@@ -1209,4 +1208,9 @@ header.sticky .nav-bar {
 
 .btn-dimo:hover {
     background-color: #0056b3;
+}
+
+.cl-text{
+    color: var(--third-color);
+    /* font-size: 16px; */
 }

@@ -318,6 +318,7 @@ header.sticky .nav-bar {
     font-size: var(--normal-font-size);
     font-weight: 500;
     border-radius: 0.5rem;
+    border: none;
     margin-top: 25px;
     transition: .3s ease;
 }

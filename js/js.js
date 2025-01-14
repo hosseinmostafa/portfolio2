@@ -62,7 +62,6 @@ window.addEventListener('scroll', () => {
 });
 
 // scroll
-
 ScrollReveal({
     // reset: true,
     distance: '60px',

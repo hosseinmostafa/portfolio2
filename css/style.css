@@ -178,6 +178,7 @@ header.sticky .nav-bar {
 .nav-items a.active {
     color: var(--second-color);
 }
+
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
     color: var(--hover-color);
@@ -318,7 +319,7 @@ header.sticky .nav-bar {
     font-size: var(--normal-font-size);
     font-weight: 500;
     border-radius: 0.5rem;
-    border: none;
+    border: no;
     margin-top: 25px;
     transition: .3s ease;
 }
@@ -1183,11 +1184,8 @@ header.sticky .nav-bar {
 
 
 @media (max-width: 576px) {
-
-    /* شاشات الهواتف الصغيرة */
     .responsive-name {
         font-size: 18px;
-        /* تصغير الخط */
     }
 
     .icon-btn {
@@ -1211,7 +1209,6 @@ header.sticky .nav-bar {
     background-color: #0056b3;
 }
 
-.cl-text{
+.cl-text {
     color: var(--third-color);
-    /* font-size: 16px; */
 }

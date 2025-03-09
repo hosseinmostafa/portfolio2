@@ -68,26 +68,26 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let stars = [];
-let numStars = 100; // عدد النجوم الافتراضي لشاشة الكبيرة
+let numStars = 100;
 
 let mouseX = canvas.width / 2;
 let mouseY = canvas.height / 2;
 
 let isDarkMode = localStorage.getItem('saved-theme') === 'dark';
 
-// تحديد عدد النجوم بناءً على حجم الشاشة
+
 function setStarCount() {
-    if (window.innerWidth >= 1024) { // شاشة الكبيرة
+    if (window.innerWidth >= 1024) {
         numStars = 100;
-    } else if (window.innerWidth >= 768) { // شاشة التابلت
+    } else if (window.innerWidth >= 768) {
         numStars = 50;
-    } else { // شاشة الموبايل
+    } else {
         numStars = 25;
     }
 }
 
 function init() {
-    setStarCount(); // تحديد عدد النجوم بناءً على حجم الشاشة
+    setStarCount();
     stars = [];
     for (let i = 0; i < numStars; i++) {
         stars.push({
@@ -175,7 +175,7 @@ canvas.addEventListener('click', (e) => {
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    init(); // إعادة تهيئة النجوم عند تغيير حجم الشاشة
+    init();
 });
 
 themeBtn.addEventListener('click', () => {

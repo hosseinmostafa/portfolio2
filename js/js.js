@@ -68,14 +68,26 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let stars = [];
-const numStars = 80;
+let numStars = 100; // عدد النجوم الافتراضي لشاشة الكبيرة
 
 let mouseX = canvas.width / 2;
 let mouseY = canvas.height / 2;
 
 let isDarkMode = localStorage.getItem('saved-theme') === 'dark';
 
+// تحديد عدد النجوم بناءً على حجم الشاشة
+function setStarCount() {
+    if (window.innerWidth >= 1024) { // شاشة الكبيرة
+        numStars = 100;
+    } else if (window.innerWidth >= 768) { // شاشة التابلت
+        numStars = 50;
+    } else { // شاشة الموبايل
+        numStars = 25;
+    }
+}
+
 function init() {
+    setStarCount(); // تحديد عدد النجوم بناءً على حجم الشاشة
     stars = [];
     for (let i = 0; i < numStars; i++) {
         stars.push({
@@ -102,14 +114,11 @@ function draw() {
         ctx.fill();
 
         if (star.isFollowingMouse) {
-
             star.x = mouseX;
             star.y = mouseY;
         } else {
-
             star.x += star.vx;
             star.y += star.vy;
-
 
             if (star.x < 0 || star.x > canvas.width || star.y < 0 || star.y > canvas.height) {
                 star.x = Math.random() * canvas.width;
@@ -166,9 +175,8 @@ canvas.addEventListener('click', (e) => {
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    init();
+    init(); // إعادة تهيئة النجوم عند تغيير حجم الشاشة
 });
-
 
 themeBtn.addEventListener('click', () => {
     isDarkMode = !isDarkMode;

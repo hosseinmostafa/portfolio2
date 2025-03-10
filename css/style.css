@@ -257,6 +257,7 @@ header.sticky .nav-bar {
     border-radius: 5px 0 0 5px;
     box-shadow: var(--box-shadow);
     cursor: pointer;
+    z-index: 1000000000000000000;
 }
 
 
